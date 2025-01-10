@@ -4,6 +4,11 @@ from time import sleep
 import pandas as pd
 
 def api_to_csv(filename: str, batch_size: int = 1000, delay_between_tries: int = 30):
+    '''In order to download data, one must:
+    1) Open an account on https://hardcover.app,
+    2) Go to https://hardcover.app/account/api and copy the api key (without the word "Bearer", just the long sequence of characters),
+    3) Create a .env file and save the copied key as HARDCOVER_API_KEY.
+    '''
     url = 'https://api.hardcover.app/v1/graphql'
     headers = {
         'Authorization': 'Bearer ' + os.getenv('HARDCOVER_API_KEY'),
