@@ -98,10 +98,10 @@ def linear_regression(X_train, X_test, y_train, y_test):
 
 mse_rating, mse_rating_var, coef_sum_rating, coef_sum_rating_var = linear_regression(X_train, X_test, y_train, y_test)
 
-st.write(f"""
+f"""
 Błąd średniokwadratowy dla średniej oceny: **{mse_rating:.4f}**  
 Błąd średniokwadratowy dla wariancji ocen: **{mse_rating_var:.4f}**
-""")
+"""
 
 "**Współczynniki regresji:**"
 col1, col2 = st.columns(2)
@@ -124,7 +124,7 @@ def gradient_boosting(X_train, X_test, y_train, y_test):
 
 mse_rating, mse_rating_var = gradient_boosting(X_train, X_test, y_train, y_test)
 
-st.write(f"""
+f"""
 Błąd średniokwadratowy dla średniej oceny: **{mse_rating:.4f}**  
 Błąd średniokwadratowy dla wariancji ocen: **{mse_rating_var:.4f}**
-""")
+"""
