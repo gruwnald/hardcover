@@ -1,4 +1,5 @@
 import requests, os
+from dotenv import load_dotenv
 from collections import defaultdict
 from time import sleep
 import pandas as pd
@@ -10,6 +11,7 @@ def api_to_csv(filename: str, batch_size: int = 1000, delay_between_tries: int =
     3) Create a .env file and save the copied key as HARDCOVER_API_KEY.
     '''
     url = 'https://api.hardcover.app/v1/graphql'
+    load_dotenv()
     headers = {
         'Authorization': 'Bearer ' + os.getenv('HARDCOVER_API_KEY'),
         'Content-Type': 'application/json'
